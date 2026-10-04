@@ -1,0 +1,16 @@
+node_modules/
+research/
+tests/generated/
+dist/
+fixtures/
+sibelius/
+branding/tex-logo-glossy-v1.png
+branding/LOGO-glossy-v1.md
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

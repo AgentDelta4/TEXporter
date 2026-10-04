@@ -1,0 +1,43 @@
+name: Report a bug
+description: Report a TEXporter export or interface problem.
+title: "[Bug]: "
+body:
+  - type: input
+    id: texporter-version
+    attributes:
+      label: TEXporter version
+      placeholder: "1.7.1"
+    validations:
+      required: true
+  - type: input
+    id: musescore-version
+    attributes:
+      label: MuseScore version and operating system
+      placeholder: "MuseScore 4.7.5, Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the export settings and relevant score markings.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include any error message. You can attach a screenshot or a small score/example export here.
+    validations:
+      required: true
+  - type: input
+    id: tonalenergy-version
+    attributes:
+      label: TonalEnergy version and device
+      description: If the problem happens when importing or playing the exported group.

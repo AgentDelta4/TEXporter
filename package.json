@@ -1,0 +1,18 @@
+{
+  "name": "musescore-texporter",
+  "version": "1.7.1",
+  "private": true,
+  "description": "TEXporter (TEX): MuseScore 4 tempo/meter to TonalEnergy metronome group exporter",
+  "scripts": {
+    "test": "node --test tests/core.test.cjs tests/features.test.cjs tests/versions.test.cjs tests/grouping.test.cjs tests/duration.test.cjs tests/holds.test.cjs tests/preflight.test.cjs",
+    "sample": "node tests/generate-sample.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgentDelta4/TEXporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AgentDelta4/TEXporter/issues"
+  },
+  "homepage": "https://github.com/AgentDelta4/TEXporter#readme"
+}

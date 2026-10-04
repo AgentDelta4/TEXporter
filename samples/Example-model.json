@@ -1,0 +1,204 @@
+{
+  "measures": [
+    {
+      "index": 1,
+      "number": 1,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 0,
+      "endTick": 1920
+    },
+    {
+      "index": 2,
+      "number": 2,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 1920,
+      "endTick": 3840
+    },
+    {
+      "index": 3,
+      "number": 3,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 3840,
+      "endTick": 5760
+    },
+    {
+      "index": 4,
+      "number": 4,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 5760,
+      "endTick": 7680
+    },
+    {
+      "index": 5,
+      "number": 5,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 7680,
+      "endTick": 9600
+    },
+    {
+      "index": 6,
+      "number": 6,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 9600,
+      "endTick": 11520
+    },
+    {
+      "index": 7,
+      "number": 7,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 11520,
+      "endTick": 13440
+    },
+    {
+      "index": 8,
+      "number": 8,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 13440,
+      "endTick": 15360
+    },
+    {
+      "index": 9,
+      "number": 9,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 15360,
+      "endTick": 16800
+    },
+    {
+      "index": 10,
+      "number": 10,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 16800,
+      "endTick": 18240
+    },
+    {
+      "index": 11,
+      "number": 11,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 18240,
+      "endTick": 19680
+    },
+    {
+      "index": 12,
+      "number": 12,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 120,
+      "startTick": 19680,
+      "endTick": 21120
+    },
+    {
+      "index": 13,
+      "number": 13,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 160,
+      "startTick": 21120,
+      "endTick": 22560
+    },
+    {
+      "index": 14,
+      "number": 14,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 160,
+      "startTick": 22560,
+      "endTick": 24000
+    },
+    {
+      "index": 15,
+      "number": 15,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 160,
+      "startTick": 24000,
+      "endTick": 25440
+    },
+    {
+      "index": 16,
+      "number": 16,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 160,
+      "startTick": 25440,
+      "endTick": 26880
+    }
+  ],
+  "regions": [
+    {
+      "startMeasure": 1,
+      "endMeasure": 8,
+      "startIndex": 1,
+      "endIndex": 8,
+      "startTick": 0,
+      "endTick": 15360,
+      "barCount": 8,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "Top",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null
+    },
+    {
+      "startMeasure": 9,
+      "endMeasure": 12,
+      "startIndex": 9,
+      "endIndex": 12,
+      "startTick": 15360,
+      "endTick": 21120,
+      "barCount": 4,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null
+    },
+    {
+      "startMeasure": 13,
+      "endMeasure": 16,
+      "startIndex": 13,
+      "endIndex": 16,
+      "startTick": 21120,
+      "endTick": 26880,
+      "barCount": 4,
+      "numerator": 3,
+      "denominator": 4,
+      "tempo": 160,
+      "boundaryKind": "",
+      "presetName": "",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null
+    }
+  ]
+}

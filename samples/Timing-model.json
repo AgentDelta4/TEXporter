@@ -1,0 +1,233 @@
+{
+  "title": "Timing",
+  "measures": [
+    {
+      "index": 1,
+      "number": 0,
+      "startTick": 0,
+      "endTick": 480,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 1,
+      "isPickup": true,
+      "holds": [],
+      "freeTime": false
+    },
+    {
+      "index": 2,
+      "number": 1,
+      "startTick": 480,
+      "endTick": 2400,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 4,
+      "isPickup": false,
+      "holds": [
+        {
+          "kind": "fermata",
+          "tick": 480,
+          "timeStretch": 2,
+          "playedStretch": 2,
+          "played": true
+        }
+      ],
+      "freeTime": false
+    },
+    {
+      "index": 3,
+      "number": 2,
+      "startTick": 2400,
+      "endTick": 4320,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 4,
+      "isPickup": false,
+      "holds": [],
+      "freeTime": true
+    },
+    {
+      "index": 4,
+      "number": 3,
+      "startTick": 4320,
+      "endTick": 5760,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 3,
+      "isPickup": false,
+      "holds": [],
+      "freeTime": false
+    }
+  ],
+  "selectedMeasures": [
+    {
+      "index": 1,
+      "number": 0,
+      "startTick": 0,
+      "endTick": 480,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 1,
+      "isPickup": true,
+      "holds": [],
+      "freeTime": false
+    },
+    {
+      "index": 2,
+      "number": 1,
+      "startTick": 480,
+      "endTick": 2400,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 4,
+      "isPickup": false,
+      "holds": [
+        {
+          "kind": "fermata",
+          "tick": 480,
+          "timeStretch": 2,
+          "playedStretch": 2,
+          "played": true
+        }
+      ],
+      "freeTime": false,
+      "requiresTimingDecision": true
+    },
+    {
+      "index": 3,
+      "number": 2,
+      "startTick": 2400,
+      "endTick": 4320,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 4,
+      "isPickup": false,
+      "holds": [],
+      "freeTime": true,
+      "requiresTimingDecision": true,
+      "durationOverrideQuarters": 6
+    },
+    {
+      "index": 4,
+      "number": 3,
+      "startTick": 4320,
+      "endTick": 5760,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "durationQuarters": 3,
+      "isPickup": false,
+      "holds": [],
+      "freeTime": false
+    }
+  ],
+  "regions": [
+    {
+      "startMeasure": 0,
+      "endMeasure": 0,
+      "startIndex": 1,
+      "endIndex": 1,
+      "startTick": 0,
+      "endTick": 480,
+      "barCount": 1,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "Top",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null,
+      "sourceIndices": [
+        1
+      ],
+      "isDurationSpecific": true,
+      "durationQuarters": 1,
+      "sourceDurationQuarters": 1,
+      "isPickup": true
+    },
+    {
+      "startMeasure": 1,
+      "endMeasure": 1,
+      "startIndex": 2,
+      "endIndex": 2,
+      "startTick": 480,
+      "endTick": 2400,
+      "barCount": 1,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null,
+      "sourceIndices": [
+        2
+      ],
+      "requiresTimingDecision": true
+    },
+    {
+      "startMeasure": 2,
+      "endMeasure": 2,
+      "startIndex": 3,
+      "endIndex": 3,
+      "startTick": 2400,
+      "endTick": 4320,
+      "barCount": 1,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null,
+      "sourceIndices": [
+        3
+      ],
+      "requiresTimingDecision": true,
+      "isDurationSpecific": true,
+      "durationQuarters": 6,
+      "sourceDurationQuarters": 4,
+      "isPickup": false,
+      "durationOverrideQuarters": 6
+    },
+    {
+      "startMeasure": 3,
+      "endMeasure": 3,
+      "startIndex": 4,
+      "endIndex": 4,
+      "startTick": 4320,
+      "endTick": 5760,
+      "barCount": 1,
+      "numerator": 4,
+      "denominator": 4,
+      "tempo": 120,
+      "boundaryKind": "",
+      "presetName": "",
+      "isRepeat": false,
+      "visitNumber": 1,
+      "sectionStart": false,
+      "ramp": null,
+      "sourceIndices": [
+        4
+      ],
+      "isDurationSpecific": true,
+      "durationQuarters": 3,
+      "sourceDurationQuarters": 3,
+      "isPickup": false
+    }
+  ],
+  "expectedQuarterCounts": 14,
+  "expectedSecondsExcludingCountIn": 7
+}
