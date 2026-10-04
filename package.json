@@ -5,7 +5,9 @@
   "description": "TEXporter for MuseScore (TEX): MuseScore 4 tempo/meter to TonalEnergy metronome group exporter",
   "scripts": {
     "test": "node --test tests/core.test.cjs tests/features.test.cjs tests/versions.test.cjs tests/grouping.test.cjs tests/duration.test.cjs tests/holds.test.cjs tests/preflight.test.cjs",
-    "sample": "node tests/generate-sample.cjs"
+    "sample": "node tests/generate-sample.cjs",
+    "sibelius:build": "node sibelius/build.cjs",
+    "sibelius:test": "node --test sibelius/tests/*.test.cjs"
   },
   "repository": {
     "type": "git",

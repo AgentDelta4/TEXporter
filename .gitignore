@@ -3,7 +3,9 @@ research/
 tests/generated/
 dist/
 fixtures/
-sibelius/
+sibelius/backups/
+sibelius/*.plg
+sibelius/tests/generated/
 branding/tex-logo-glossy-v1.png
 branding/LOGO-glossy-v1.md
 *.log

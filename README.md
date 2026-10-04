@@ -8,6 +8,8 @@
 
 Current edition: **TEXporter for MuseScore 1.7.2**.
 
+The repository also includes **[TEXporter for Sibelius — INDEV](sibelius/README.md)**, based on this MuseScore version. The Sibelius edition is under development and has not been run inside Sibelius. Its installation package is a separate [prerelease](https://github.com/AgentDelta4/TEXporter/releases/tag/sibelius-v1.7.2-indev.1).
+
 ## Install
 
 Tested API target: **MuseScore Studio 4.7.5**, checked on October 2, 2026. This uses its supported legacy QML plugin API (`MuseScore 3.0` is still the correct import name in MuseScore 4). No compilation, npm installation or plugin manifest is required.

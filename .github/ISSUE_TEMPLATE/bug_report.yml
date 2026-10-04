@@ -1,19 +1,28 @@
 name: Report a bug
-description: Report a TEXporter for MuseScore export or interface problem.
+description: Report a TEXporter export or interface problem, including the Sibelius INDEV edition.
 title: "[Bug]: "
 body:
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - MuseScore
+        - Sibelius — INDEV
+    validations:
+      required: true
   - type: input
     id: texporter-version
     attributes:
-      label: TEXporter for MuseScore version
+      label: TEXporter version
       placeholder: "1.7.2"
     validations:
       required: true
   - type: input
     id: musescore-version
     attributes:
-      label: MuseScore version and operating system
-      placeholder: "MuseScore 4.7.5, Windows 11"
+      label: Notation application version and operating system
+      placeholder: "MuseScore 4.7.5 or Sibelius Ultimate 2026.2, Windows 11"
     validations:
       required: true
   - type: textarea
