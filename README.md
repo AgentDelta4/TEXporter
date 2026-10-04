@@ -1,23 +1,23 @@
 # TEXporter for MuseScore
 
-<img src="plugin/assets/tex-logo.png" alt="TEXporter logo" width="128">
+<img src="plugin/assets/tex-logo.png" alt="TEXporter for MuseScore logo" width="128">
 
-**TEXporter**, or **TEX** for short, exports the **currently open MuseScore score** or a chosen measure range to a TonalEnergy `.tetmetgroup` metronome group. It reads time signatures, tempo, eighth-note grouping and playback-enabled gradual tempo lines, with options for ordinary repeats and section boundaries. An editable preview lets you adjust presets before export. Pitches and instrumentation are ignored. See the [logo and generation notes](docs/LOGO.md).
+**TEXporter for MuseScore**, or **TEX** for short, exports the **currently open MuseScore score** or a chosen measure range to a TonalEnergy `.tetmetgroup` metronome group. It reads time signatures, tempo, eighth-note grouping and playback-enabled gradual tempo lines, with options for ordinary repeats and section boundaries. An editable preview lets you adjust presets before export. Pitches and instrumentation are ignored. See the [logo and generation notes](docs/LOGO.md).
 
-**[Download the latest release](https://github.com/AgentDelta4/TEXporter/releases/latest)** · **[Report a bug](https://github.com/AgentDelta4/TEXporter/issues/new/choose)** · [Source code](https://github.com/AgentDelta4/TEXporter)
+**[Download the MuseScore edition](https://github.com/AgentDelta4/TEXporter/releases/tag/musescore-v1.7.2)** · **[Report a bug](https://github.com/AgentDelta4/TEXporter/issues/new/choose)** · [Source code](https://github.com/AgentDelta4/TEXporter)
 
-Current MuseScore plugin: **TEXporter 1.7.1**.
+Current edition: **TEXporter for MuseScore 1.7.2**.
 
 ## Install
 
 Tested API target: **MuseScore Studio 4.7.5**, checked on October 2, 2026. This uses its supported legacy QML plugin API (`MuseScore 3.0` is still the correct import name in MuseScore 4). No compilation, npm installation or plugin manifest is required.
 
-1. Download `TEXporter-1.7.1.zip` from [Releases](https://github.com/AgentDelta4/TEXporter/releases/latest), then extract it into your MuseScore **Plugins** folder. Find its actual location in **Edit → Preferences → Folders → Plugins** on Windows/Linux, or MuseScore's preferences on macOS. A new installation has a folder named `TEXporter`.
+1. Download `TEXporter-MuseScore-1.7.2.zip` from the [MuseScore release](https://github.com/AgentDelta4/TEXporter/releases/tag/musescore-v1.7.2), then extract it into your MuseScore **Plugins** folder. Find its actual location in **Edit → Preferences → Folders → Plugins** on Windows/Linux, or MuseScore's preferences on macOS. A new installation has a folder named `TEXporter`.
 2. Keep `TEXporter/TEXporter.qml`, `TEXporter/lib/`, `TEXporter/ui/` and `TEXporter/assets/` together. For a source install, copy the contents of this project's `plugin/` into a folder named `TEXporter` in that Plugins folder.
-3. Restart MuseScore if needed. Open **Plugins → Manage plugins**, locate **TEXporter**, and enable it. The category is Playback. Depending on the platform/window layout, manage plugins is also available from Home → Plugins.
-4. Open a score and run **TEXporter** from Plugins.
+3. Restart MuseScore if needed. Open **Plugins → Manage plugins**, locate **TEXporter for MuseScore**, and enable it. The category is Playback. Depending on the platform/window layout, manage plugins is also available from Home → Plugins.
+4. Open a score and run **TEXporter for MuseScore** from Plugins.
 
-**Updating a previous TEExporter installation:** retain its existing `TEExporter` folder and replace its contents with the files inside the new archive's `TEXporter` folder. After confirming `TEXporter.qml`, `lib/`, `ui/` and `assets/` are present, remove only the old `TEExporter.qml` entry point so MuseScore finds one plugin. Restart MuseScore and enable **TEXporter** in Manage plugins if needed. The internal settings category remains `TEExporter`, preserving saved export options. Avoid installing a second copy into a neighboring `TEXporter` folder while the old installation remains active.
+**Updating a previous TEExporter installation:** retain its existing `TEExporter` folder and replace its contents with the files inside the new archive's `TEXporter` folder. After confirming `TEXporter.qml`, `lib/`, `ui/` and `assets/` are present, remove only the old `TEExporter.qml` entry point so MuseScore finds one plugin. Restart MuseScore and enable **TEXporter for MuseScore** in Manage plugins if needed. The internal settings category remains `TEExporter`, preserving saved export options. Avoid installing a second copy into a neighboring `TEXporter` folder while the old installation remains active.
 
 For development on Windows, `tests/install-local.ps1 -Destination "<your MuseScore Plugins folder>\TEXporter"` copies the runtime files, backs up an existing installation inside this project and verifies copied file hashes. Use the Plugins location shown in MuseScore preferences. Packaging uses `pwsh -NoProfile -File tests/package.ps1`; the generated archive is placed in ignored `dist/`.
 
@@ -97,14 +97,14 @@ Transfer the file to your TonalEnergy device and open/share it with TE Tuner. Se
 
 ## What is verified
 
-- **120 Node tests pass in 1.7.1**, exercising the same JavaScript files imported by the plugin: selection/ranges, repeat visits, preview edits, preferences, native group count-in settings, clipped gradual changes, three met versions, automatic/edited /8 grouping, exact masks for 1–64 counts, actual pickup/irregular lengths, required hold choices and the supplied transition shapes.
+- **120 Node tests pass in 1.7.2**, exercising the same JavaScript files imported by the plugin: selection/ranges, repeat visits, preview edits, preferences, native group count-in settings, clipped gradual changes, three met versions, automatic/edited /8 grouping, exact masks for 1–64 counts, actual pickup/irregular lengths, required hold choices and the supplied transition shapes.
 - The updated dialog passes the offscreen **Qt 6.10.2** smoke test, matching the installed MuseScore Qt version. Real Qt controls with API-shaped MuseScore doubles verify live option/text updates, invalid raw range input blocking stale saves, immediate Export flushing pending changes, focused grouping/counts fields retaining identity and caret, visit-specific edits alongside shared written-bar handling choices, /8 count-unit conversion and retained edits. Three-file saves, cancellation, duplicate destinations, write/readback failures, Scores paths and restored options also pass. Scoped blue components are separately checked under a yellow Windows host palette.
 - .NET XML parsing and full preset attribute/child-tree comparisons against all **79 presets in five sanitized reference exports** (69 in the count-in/default/alternate-settings references, six tempo-ramp presets and four click-pattern presets). The 4/4 half-note and downbeat masks exactly match the supplied click-pattern reference export.
 - A deterministic [sample group](samples/Example.tetmetgroup) implements the requested 16-measure example as three presets: eight bars of 4/4 at 120, four bars of 3/4 at 120, four bars of 3/4 at 160.
 - Installed MuseScore identifies itself as **4.7.5**, and the current-release source was inspected for the APIs used.
 - Installed MuseScore converted the native `Advanced.mscx` sample to MusicXML successfully, retaining ten measures, A–D, tempo markings and both gradual-line labels.
 
-The user reports the earlier installed plugin works well in MuseScore as of October 2, 2026. Current automatic-update and inline-control checks use API doubles; live MuseScore interaction and TonalEnergy import/playback remain to be tested for 1.7.1. Fixture compatibility is structural evidence. Transition timing, subdivision and accent interpretations still need device verification. Generic unobserved meter encodings produce visible warnings.
+The user reports the earlier installed plugin works well in MuseScore as of October 2, 2026. Current automatic-update and inline-control checks use API doubles; live MuseScore interaction and TonalEnergy import/playback remain to be tested for 1.7.2. Fixture compatibility is structural evidence. Transition timing, subdivision and accent interpretations still need device verification. Generic unobserved meter encodings produce visible warnings.
 
 ## Limitations
 
@@ -114,7 +114,7 @@ Ordinary denominators 1, 2, 4, 8, 16, 32 and 64 and numerators 1–64 fit the in
 
 Additional TE exports are needed to confirm common compound, cut-time and irregular-meter encodings. See the [requested reference meters and settings](docs/TE-REFERENCE-REQUEST.md). TonalEnergy import and audio timing checks are still pending for the current version; structural tests do not establish device playback behavior.
 
-Developed by **Skyeler Robinson**. Code written by AI. Please [report bugs on GitHub](https://github.com/AgentDelta4/TEXporter/issues/new/choose); you can also contact the developer through [Instagram @skyelerrobinson__percussion](https://www.instagram.com/skyelerrobinson__percussion/) or [sr.percussion@icloud.com](mailto:sr.percussion@icloud.com). Please include your MuseScore and TEXporter versions, the export settings, and any error message. The dialog footer shows the AI disclosure and plugin version, with links to [GitHub](https://github.com/AgentDelta4/TEXporter), [latest releases](https://github.com/AgentDelta4/TEXporter/releases/latest) and [bug reports](https://github.com/AgentDelta4/TEXporter/issues/new/choose).
+Developed by **Skyeler Robinson**. Code written by AI. Please [report bugs on GitHub](https://github.com/AgentDelta4/TEXporter/issues/new/choose); you can also contact the developer through [Instagram @skyelerrobinson__percussion](https://www.instagram.com/skyelerrobinson__percussion/) or [sr.percussion@icloud.com](mailto:sr.percussion@icloud.com). Please include your MuseScore and TEXporter for MuseScore versions, the export settings, and any error message. The dialog footer shows the AI disclosure and plugin version, with links to [GitHub](https://github.com/AgentDelta4/TEXporter), [MuseScore downloads](https://github.com/AgentDelta4/TEXporter/releases?q=MuseScore&expanded=true) and [bug reports](https://github.com/AgentDelta4/TEXporter/issues/new/choose).
 
 ## Development and tests
 

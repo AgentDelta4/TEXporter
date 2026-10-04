@@ -8,7 +8,7 @@ if (Test-Path -LiteralPath 'plugin\TEExporter.qml') {
 }
 New-Item -ItemType Directory -Force dist | Out-Null
 $version = (Get-Content -Raw package.json | ConvertFrom-Json).version
-$destination = Join-Path $PWD ('dist/TEXporter-' + $version + '.zip')
+$destination = Join-Path $PWD ('dist/TEXporter-MuseScore-' + $version + '.zip')
 $stream = [IO.File]::Open($destination, [IO.FileMode]::Create)
 $zip = [IO.Compression.ZipArchive]::new($stream, [IO.Compression.ZipArchiveMode]::Create)
 try {

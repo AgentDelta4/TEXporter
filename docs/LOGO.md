@@ -1,8 +1,8 @@
 # TEXporter for MuseScore: logo
 
-<img src="../plugin/assets/tex-logo.png" alt="TEXporter logo" width="160">
+<img src="../plugin/assets/tex-logo.png" alt="TEXporter for MuseScore logo" width="160">
 
-Product name: **TEXporter**. Short name: **TEX**.
+Product: **TEXporter**. Edition: **TEXporter for MuseScore**. Short name: **TEX**. The edition label distinguishes this plugin from possible future adapters; the logo lettering stays TEX.
 
 The current logo keeps the TEX lettering, musical pulse and export arrow from the original design, with a flat matte finish and a purple-to-blue color gradient. Bevels, shine and glow were removed. Skyeler Robinson's SR Percussion logo was a reference for the colors and flat graphic style; its SR lettering was not reused.
 

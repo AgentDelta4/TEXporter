@@ -40,11 +40,11 @@ The legacy FileIO implementation restricts writes to allowed content paths and r
 
 ## Branding and installation compatibility (1.6.0)
 
-The MuseScore product is **TEXporter**, shortened to **TEX**. Its entry point is `plugin/TEXporter.qml`; new archives follow `dist/TEXporter-<version>.zip` with a single `TEXporter/` top-level folder. `tests/package.ps1` rejects a missing new entry point or a remaining legacy `TEExporter.qml` source file to prevent distributing duplicate plugins. Historical archives are retained locally and excluded from this repository. Logo/prompt documentation is in [LOGO.md](LOGO.md); distribution copies adjust the logo's relative path to the bundled runtime asset.
+The edition is **TEXporter for MuseScore**, shortened to **TEX**. Its entry point is `plugin/TEXporter.qml`; new archives follow `dist/TEXporter-MuseScore-<version>.zip` with a single `TEXporter/` top-level folder. `tests/package.ps1` rejects a missing new entry point or a remaining legacy `TEExporter.qml` source file to prevent distributing duplicate plugins. This release is tagged `musescore-v1.7.2`; its asset is `TEXporter-MuseScore-1.7.2.zip`. The runtime folder and entry-point filenames remain unchanged. Historical archives are retained locally and excluded from this repository. Logo/prompt documentation is in [LOGO.md](LOGO.md); distribution copies adjust the logo's relative path to the bundled runtime asset.
 
 The internal `TEExporter` Settings category remains unchanged so existing export preferences continue to load. The development installer accepts `-Destination` for the Plugins location shown in MuseScore preferences, creates a full project-local backup and verifies every copied runtime/asset hash. Current updates accept `TEXporter.qml` as the installed entry. For legacy installations, remove only the old `TEExporter.qml` after verifying the new runtime is complete, as described in the README. MuseScore may need the renamed plugin enabled again after restart.
 
-The footer links to the [repository](https://github.com/AgentDelta4/TEXporter), [latest release](https://github.com/AgentDelta4/TEXporter/releases/latest) and [bug issue form](https://github.com/AgentDelta4/TEXporter/issues/new/choose). The GitHub issue form collects version, export settings and reproduction details.
+The footer links to the [repository](https://github.com/AgentDelta4/TEXporter), [MuseScore downloads](https://github.com/AgentDelta4/TEXporter/releases?q=MuseScore&expanded=true) and [bug issue form](https://github.com/AgentDelta4/TEXporter/issues/new/choose). The downloads link filters the release listing to MuseScore; the README points to the current edition-specific tag. The GitHub issue form collects version, export settings and reproduction details.
 
 Version 1.4.0 adds `fullMet`, `halfMet`, and `downbeatMet` preferences (defaults true, false, false). `TE.serializeExports()` snapshots the edited regions into one independently labeled group per selected version. The single-group `TE.serialize()` retains its full-click default for existing adapters. `getBeatMasks()` returns exact decimal mask strings and the signed low 32-bit legacy mask, using the click-pattern reference fixture for 4/4 behavior. The native count-in is serialized identically for every version.
 
@@ -52,7 +52,7 @@ The dialog saves these snapshots through a finite queue. Every file gets its own
 
 For a new notation adapter, return the same measure/event model and call `Model.regions()` and `TE.serialize()`. No MuseScore types occur in the latter two modules.
 
-## Live preview and inline handling (1.7.1)
+## Live preview and inline handling (1.7.2)
 
 The dialog analyzes the score when opened and updates its preview automatically. Editable text fields use `onTextEdited`, including starting/ending BPM, Bars, meter, ramp offset/length, name and /8 grouping. Those edits refresh validated regions, estimated duration and pending version outputs without waiting for focus loss. Briefly invalid text remains visible with an actionable error; it does not silently reuse older valid output.
 

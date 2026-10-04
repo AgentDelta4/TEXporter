@@ -66,5 +66,5 @@ if ($taskLegacyHash) {
     Remove-Item -LiteralPath $taskVerifiedLegacyEntry
     if (Test-Path -LiteralPath $taskLegacyEntry) { throw 'The legacy entry point could not be removed.' }
 }
-Write-Output ('Installed TEXporter ' + $taskVersion + ': ' + $taskTarget)
+Write-Output ('Installed TEXporter for MuseScore ' + $taskVersion + ': ' + $taskTarget)
 Write-Output ('Backup: ' + $taskBackup)

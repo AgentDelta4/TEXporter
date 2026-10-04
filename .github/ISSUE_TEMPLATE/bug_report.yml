@@ -1,12 +1,12 @@
 name: Report a bug
-description: Report a TEXporter export or interface problem.
+description: Report a TEXporter for MuseScore export or interface problem.
 title: "[Bug]: "
 body:
   - type: input
     id: texporter-version
     attributes:
-      label: TEXporter version
-      placeholder: "1.7.1"
+      label: TEXporter for MuseScore version
+      placeholder: "1.7.2"
     validations:
       required: true
   - type: input

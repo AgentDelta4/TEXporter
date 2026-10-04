@@ -17,9 +17,9 @@ import "lib/Preflight.js" as Preflight
 
 MuseScore {
     id: root
-    title: "TEXporter — Export to TonalEnergy"
-    description: "Export score ranges, editable presets, click count-ins and gradual tempo changes"
-    version: "1.7.1"
+    title: "TEXporter for MuseScore"
+    description: "Export MuseScore tempo and meter to TonalEnergy metronome groups"
+    version: "1.7.2"
     categoryCode: "playback"
     pluginType: "dialog"
     requiresScore: true
@@ -27,6 +27,7 @@ MuseScore {
     height: 760
     readonly property color accentColor: "#1976d2"
     readonly property string repositoryUrl: "https://github.com/AgentDelta4/TEXporter"
+    readonly property string releasesUrl: repositoryUrl + "/releases?q=MuseScore&expanded=true"
 
     property var analysis: null
     property var regions: []
@@ -455,7 +456,7 @@ MuseScore {
             }
             ColumnLayout {
                 spacing: 1
-                Label { text: "TEXporter"; font.pixelSize: 24; font.bold: true }
+                Label { text: "TEXporter for MuseScore"; font.pixelSize: 24; font.bold: true }
                 Label { text: "Score to TonalEnergy"; font.pixelSize: 13; opacity: 0.75 }
             }
             Item { Layout.fillWidth: true }
@@ -710,7 +711,7 @@ MuseScore {
                 Label { text: "Developed by Skyeler Robinson"; font.pixelSize: 12 }
                 Label { text: "· Code written by AI"; font.pixelSize: 12 }
                 Item { Layout.fillWidth: true }
-                Label { text: "TEXporter v" + root.version; font.pixelSize: 12; opacity: 0.75 }
+                Label { text: "MuseScore edition · v" + root.version; font.pixelSize: 12; opacity: 0.75 }
             }
             Label {
                 Layout.fillWidth: true
@@ -723,7 +724,7 @@ MuseScore {
             }
             Label {
                 Layout.fillWidth: true
-                text: 'GitHub: <a href="' + root.repositoryUrl + '">Repository</a> · <a href="' + root.repositoryUrl + '/releases/latest">Download latest</a> · <a href="' + root.repositoryUrl + '/issues/new/choose">Report a bug</a>'
+                text: 'GitHub: <a href="' + root.repositoryUrl + '">Repository</a> · <a href="' + root.releasesUrl + '">MuseScore downloads</a> · <a href="' + root.repositoryUrl + '/issues/new/choose">Report a bug</a>'
                 textFormat: Text.StyledText
                 wrapMode: Text.WordWrap
                 font.pixelSize: 13

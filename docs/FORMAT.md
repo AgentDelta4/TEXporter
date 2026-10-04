@@ -1,6 +1,6 @@
 # TEXporter for MuseScore: supplied TonalEnergy format
 
-TEXporter 1.7.1 keeps the metronome XML behavior described here. Public reference exports in `tests/references/` preserve the supplied technical fields and XML topology while sanitizing group/preset names. Untouched private originals remain in ignored local `fixtures/`; they are not published or bundled.
+TEXporter for MuseScore 1.7.2 keeps the metronome XML behavior described here. Public reference exports in `tests/references/` preserve the supplied technical fields and XML topology while sanitizing group/preset names. Untouched private originals remain in ignored local `fixtures/`; they are not published or bundled.
 
 The first three sanitized public references are `tests/references/count-in.tetmetgroup` (19 presets), `tests/references/defaults.tetmetgroup` (30) and `tests/references/alternate-settings.tetmetgroup` (20). There is no published XML schema established by this investigation and no TE import test yet. **Minimum importer-required fields cannot be determined from exports alone.** The implementation therefore preserves the complete observed structure instead of claiming that a reduced schema is sufficient.
 
